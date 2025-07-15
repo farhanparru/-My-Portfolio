@@ -27,10 +27,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 pt-2">
               {[
-                { icon: <FaLinkedin className="text-xl" />, url: "https://linkedin.com" },
-                { icon: <FaGithub className="text-xl" />, url: "https://github.com" },
+                { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/in/shaminfarhan/" },
+                { icon: <FaGithub className="text-xl" />, url: "https://github.com/farhanparru" },
                 { icon: <FaTwitter className="text-xl" />, url: "https://twitter.com" },
-                { icon: <SiGmail className="text-xl" />, url: "mailto:contact@example.com" }
+                { icon: <SiGmail className="text-xl" />, url: "mailto:farhan.dev24@gmail.com" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -126,13 +126,13 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-uaeGold" />
                 <a href="mailto:shamin@example.com" className="hover:text-uaeGold transition-colors">
-                  shamin@example.com
+                 farhan.dev24@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-uaeGold" />
                 <a href="tel:+971501234567" className="hover:text-uaeGold transition-colors">
-                  +971 50 123 4567
+                  +971 55 638 4774
                 </a>
               </div>
             </address>
@@ -157,7 +157,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-gray-400 mb-4 md:mb-0"
           >
-            &copy; {currentYear} Muhammad Shamin Farhan. All rights reserved.
+            &copy; 2025 Muhammad Shamin Farhan. All rights reserved.
           </motion.p>
 
           <motion.div
