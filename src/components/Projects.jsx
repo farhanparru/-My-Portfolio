@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiExternalLink, FiFilter } from "react-icons/fi";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import sevensc from "../assets/image sevenss.png";
 import technomagic from "../assets/technomagix.png";
 import emirates from "../assets/emiratesGold.png";
 import cloud from "../assets/cloudQlobeuu.png";
 import zealTours from '../assets/zealTourisamAGne.png'
+import everestTraders from '../assets/emiratesGold.png'
 // Project data
 const projectsData = [
 {
@@ -109,7 +110,35 @@ const projectsData = [
       "Automated email notifications",
       "Analytics and reporting"
     ]
-  }
+  },
+
+  {
+  id: 6,
+  title: "Everest Traders Inc",
+  shortTitle: "Everest Traders",
+  description: "Comprehensive e-commerce platform for international trading company featuring product catalogs, inquiry system, and multi-language support. Implemented secure authentication and responsive design for global clients.",
+  tags: [
+    "React.js",
+    "Tailwind CSS",
+    "Vercel",
+    "Responsive Design"
+  ],
+  image: everestTraders, // Make sure to add this image to your assets
+  github: {
+    frontend: "https://github.com/farhanparru/EVERESTTRADERS.git",
+
+  },
+  live: "https://everesttraders.vercel.app/",
+  features: [
+    "Multi-language support (English, Arabic, Chinese)",
+    "Product catalog with advanced filtering",
+    "Secure client inquiry system",
+    "Role-based user authentication",
+    "Responsive design for all devices",
+    "Interactive product showcase",
+    "Admin dashboard for content management"
+  ]
+}
 ];
 
 const Projects = () => {
