@@ -14,7 +14,7 @@ const projectsData = [
   shortTitle: "Sevenscape", // For mobile view
   description:
     "Facility management company website with service showcase and contact system",
-  tags: ["React", "Tailwind CSS", "Responsive","Node.js","MongoDB","Express.js"],
+  tags: ["React.js", "Tailwind CSS", "Responsive","Node.js","MongoDB","Express.js","Vercel"],
   image: sevensc, // Direct image reference
   github: {
     frontend: "https://github.com/farhanparru/SevenscapeGeneralContracting-LLC.git",
@@ -29,7 +29,7 @@ const projectsData = [
     description:
       "Official corporate website for IT solutions provider featuring service showcases, client portals, and interactive tech demonstrations. Implemented smooth animations and responsive layouts to enhance user engagement.",
     tags: [
-      "React",
+      "React.js",
       "Tailwind CSS",
       "Framer Motion",
       "GSAP",
@@ -44,7 +44,7 @@ const projectsData = [
     title: "Emirates Gold DMCC",
     description:
       "A premium gold trading platform featuring real-time market data visualization, secure user authentication, and responsive trading dashboards. Designed to enhance customer engagement with intuitive navigation and seamless cross-device experience.",
-    tags: ["React.js", "Framer Motion", "Tailwind CSS", "Firebase", "Chart.js"],
+    tags: ["React.js", "Framer Motion", "Tailwind CSS", "Firebase", "Chart.js","Vercel"],
     image: emirates,
     github: "https://github.com/farhanparru/EmiratesGoldKSD.git",
     live: "https://emirates-gold-ksd-aflw.vercel.app/",
@@ -116,7 +116,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
-  const filters = ["All", "React", "Node.js", "Full Stack"];
+  const filters = ["All", "React.js", "Node.js", "Full Stack"];
 
   const handleFilter = (item) => {
     setActiveFilter(item);
