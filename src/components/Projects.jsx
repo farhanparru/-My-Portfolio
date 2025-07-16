@@ -6,7 +6,7 @@ import technomagic from "../assets/technomagix.png";
 import emirates from "../assets/emiratesGold.png";
 import cloud from "../assets/cloudQlobeuu.png";
 import zealTours from '../assets/zealTourisamAGne.png'
-import everestTraders from '../assets/emiratesGold.png'
+import everestTraders from '../assets/everset.png'
 // Project data
 const projectsData = [
 {
