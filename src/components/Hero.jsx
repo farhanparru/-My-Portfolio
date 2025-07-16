@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import profileImage from '../assets/new my pic.jpg'; // Replace with your image path
 import { FaDownload } from "react-icons/fa";
-import cvPDF from '../assets/Muhammad-Shamin-Farhan-softwareDeveloper.pdf'
+import cvPDF from '../assets/Muhammad-Shamin-Farhan-FullStack Developer.pdf'
 
 const Hero = ({ darkMode }) => {
   return (
