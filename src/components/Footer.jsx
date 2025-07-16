@@ -1,16 +1,7 @@
-import { motion } from "framer-motion";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram,FaMapMarkerAlt,FaEnvelope ,FaPhoneAlt} from 'react-icons/fa';
 
-import { SiGmail } from "react-icons/si";
+import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,31 +20,17 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-bold flex items-center">
-              <span className="text-uaeGold">Muhammad</span>&nbsp;Shamin Farhan
+              <span className="text-uaeGold">Muhammad</span> Shamin
             </h3>
-
             <p className="text-gray-300">
-              Full Stack Developer based in Dubai, creating modern web
-              experiences with cutting-edge technologies.
+              Full Stack Developer based in Dubai, creating modern web experiences with cutting-edge technologies.
             </p>
             <div className="flex space-x-4 pt-2">
               {[
-                {
-                  icon: <FaLinkedin className="text-xl" />,
-                  url: "https://www.linkedin.com/in/shaminfarhan/",
-                },
-                {
-                  icon: <FaGithub className="text-xl" />,
-                  url: "https://github.com/farhanparru",
-                },
-                {
-                  icon: <FaTwitter className="text-xl" />,
-                  url: "https://twitter.com",
-                },
-                {
-                  icon: <SiGmail className="text-xl" />,
-                  url: "mailto:farhan.dev24@gmail.com",
-                },
+                { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/in/shaminfarhan/" },
+                { icon: <FaGithub className="text-xl" />, url: "https://github.com/farhanparru" },
+                { icon: <FaTwitter className="text-xl" />, url: "https://twitter.com" },
+                { icon: <SiGmail className="text-xl" />, url: "mailto:farhan.dev24@gmail.com" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -85,15 +62,15 @@ const Footer = () => {
                 { name: "About", url: "#about" },
                 { name: "Skills", url: "#skills" },
                 { name: "Projects", url: "#projects" },
-                { name: "Contact", url: "#contact" },
+                { name: "Contact", url: "#contact" }
               ].map((link, index) => (
-                <motion.li
+                <motion.li 
                   key={index}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <a
-                    href={link.url}
+                  <a 
+                    href={link.url} 
                     className="text-gray-300 hover:text-uaeGold transition-colors"
                   >
                     {link.name}
@@ -118,9 +95,9 @@ const Footer = () => {
                 "Mobile Applications",
                 "UI/UX Design",
                 "API Development",
-                "Cloud Solutions",
+                "Cloud Solutions"
               ].map((service, index) => (
-                <motion.li
+                <motion.li 
                   key={index}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -148,19 +125,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-uaeGold" />
-                <a
-                  href="mailto:shamin@example.com"
-                  className="hover:text-uaeGold transition-colors"
-                >
-                  farhan.dev24@gmail.com
+                <a href="mailto:shamin@example.com" className="hover:text-uaeGold transition-colors">
+                 farhan.dev24@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-uaeGold" />
-                <a
-                  href="tel:+971501234567"
-                  className="hover:text-uaeGold transition-colors"
-                >
+                <a href="tel:+971501234567" className="hover:text-uaeGold transition-colors">
                   +971 55 638 4774
                 </a>
               </div>
@@ -196,22 +167,13 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex space-x-6"
           >
-            <a
-              href="#"
-              className="text-gray-400 hover:text-uaeGold transition-colors text-sm"
-            >
+            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
               Privacy Policy
             </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-uaeGold transition-colors text-sm"
-            >
+            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
               Terms of Service
             </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-uaeGold transition-colors text-sm"
-            >
+            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
               Cookies
             </a>
           </motion.div>
