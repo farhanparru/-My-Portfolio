@@ -5,6 +5,7 @@ import sevensc from "../assets/image sevenss.png";
 import technomagic from "../assets/technomagix.png";
 import emirates from "../assets/emiratesGold.png";
 import cloud from "../assets/cloudQlobeuu.png";
+import zealTours from '../assets/zealTourisamAGne.png'
 // Project data
 const projectsData = [
 {
@@ -76,6 +77,39 @@ const projectsData = [
       "End-to-end encrypted communications",
     ],
   },
+
+  {
+    id: 5,
+    title: "Zeal Tours and Travels",
+    shortTitle: "Zeal Tours",
+    description:
+      "Comprehensive travel agency platform with tour packages, booking system, and complete admin panel for managing bookings, customers, and inventory. Features secure payment integration and real-time availability updates.",
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Admin Panel",
+      "Payment Gateway",
+      "Responsive Design"
+    ],
+    image: zealTours,
+    github: {
+      frontend: "https://github.com/Sanjay9745/Zeal-Tourism.git",
+      backend: "https://github.com/farhanparru/ZealTourisam-Backend.git",
+      admin: "https://github.com/farhanparru/ZealTourisamAdmin.git"
+    },
+    live: "https://admin-gules-five.vercel.app/",
+    features: [
+      "Complete booking management system",
+      "Role-based admin dashboard",
+      "Real-time package availability",
+      "Multi-payment gateway integration",
+      "Customer relationship management",
+      "Automated email notifications",
+      "Analytics and reporting"
+    ]
+  }
 ];
 
 const Projects = () => {
