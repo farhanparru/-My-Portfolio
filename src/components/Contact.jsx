@@ -90,7 +90,7 @@ const Contact = () => {
               <motion.a
                 whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/971501234567"
+                href="https://wa.me/97556384774"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white p-3 rounded-full shadow-md"
@@ -101,7 +101,7 @@ const Contact = () => {
               <motion.a
                 whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://t.me/yourusername"
+                href="https://t.me/MuhammadShaminFarhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 text-white p-3 rounded-full shadow-md"
@@ -142,7 +142,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-uaeGold focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  placeholder="your@email.com"
+                  placeholder="farhan.dev24@gmail.com"
                   required
                 />
               </div>
