@@ -10,11 +10,11 @@ import zealTours from '../assets/zealTourisamAGne.png'
 const projectsData = [
 {
   id: 1,
-  title: "Sevenscape General Contracting",
+  title: "Sevenscape General Contracting and Facility Management Services L.L.C",
   shortTitle: "Sevenscape", // For mobile view
   description:
     "Facility management company website with service showcase and contact system",
-  tags: ["React", "Tailwind CSS", "Responsive"],
+  tags: ["React", "Tailwind CSS", "Responsive","Node.js","MongoDB","Express.js"],
   image: sevensc, // Direct image reference
   github: {
     frontend: "https://github.com/farhanparru/SevenscapeGeneralContracting-LLC.git",
