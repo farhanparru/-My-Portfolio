@@ -7,6 +7,7 @@ import emirates from "../assets/emiratesGold.png";
 import cloud from "../assets/cloudQlobeuu.png";
 import zealTours from '../assets/zealTourisamAGne.png'
 import everestTraders from '../assets/everset.png'
+import aliyaSchool from '../assets/school.png'
 // Project data
 const projectsData = [
 {
@@ -138,6 +139,40 @@ const projectsData = [
     "Interactive product showcase",
     "Admin dashboard for content management"
   ]
+},
+
+{
+  id: 7,
+  title: "Aliya Senior Secondary School",
+  shortTitle: "Aliya School",
+  description: "Official website for Aliya Senior Secondary School featuring academic programs, admission information, school activities, and parent portal. Implemented with UAE-inspired design elements and responsive layouts for all devices.",
+  tags: [
+    "React.js",
+    "Tailwind CSS",
+    "Responsive Design",
+    "UAE Theme",
+    "Interactive Gallery",
+    "Vercel"
+  ],
+  image: aliyaSchool, // Make sure to import this image
+  github: {
+    frontend: "https://github.com/farhanparru/Aliya-Senior-Secondary-School.git",
+    // Add backend if applicable
+  },
+  live: "https://shcool-project.vercel.app/", // Update with actual live URL
+  features: [
+    "UAE-inspired color scheme and design",
+    "Interactive photo gallery",
+    "Admission form with validation",
+    "Responsive mobile-first design",
+    "Academic program showcase",
+    "School management section",
+    "Principal's message section",
+    "Chatbot support system",
+    "Event calendar integration",
+    "Parent portal (if implemented)"
+  ],
+  specialNotes: "This project incorporates cultural elements from the UAE while serving an Indian educational institution, creating a unique fusion design approach. The implementation includes a custom chatbot for student/parent inquiries."
 }
 ];
 
