@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navabar.jsx";
 import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
