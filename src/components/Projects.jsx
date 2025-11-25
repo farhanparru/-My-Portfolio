@@ -8,68 +8,73 @@ import cloud from "../assets/cloudQlobeuu.png";
 import zealTours from '../assets/zealTourisamAGne.png'
 import everestTraders from '../assets/everset.png'
 import aliyaSchool from '../assets/school.png'
+import montres from '../assets/montres-ecommrece.png' // Make sure to add this image
+
 // Project data
 const projectsData = [
-{
-  id: 1,
-  title: "Sevenscape General Contracting and Facility Management Services L.L.C",
-  shortTitle: "Sevenscape", // For mobile view
-  description:
-    "Facility management company website with service showcase and contact system",
-  tags: ["React.js", "Tailwind CSS", "Responsive","Node.js","MongoDB","Express.js","Vercel"],
-  image: sevensc, // Direct image reference
-  github: {
-    frontend: "https://github.com/farhanparru/SevenscapeGeneralContracting-LLC.git",
-    backend: "https://github.com/farhanparru/SevenscapeGeneralContracting-Backend.git"
+  {
+    id: 1,
+    title: "Montres Trading L.L.C – The Art Of Time UAE",
+    shortTitle: "Montres Trading",
+    description: "Premium e-commerce platform for luxury watches featuring online shopping, secure payments, and comprehensive product catalog. Built with modern technologies for seamless user experience.",
+    tags: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "E-commerce", "Responsive"],
+    image: montres,
+    github: {
+      frontend: "https://github.com/MontresTeam/montersE-commerce-next.git", // Update with actual repo if available
+      backend: "https://github.com/MontresTeam/Montres-Ecommerce-Backend.git" // Update with actual repo if available
+    },
+    live: "https://www.montres.ae/",
+    features: [
+      "E-commerce shopping cart",
+      "Secure payment integration",
+      "Product catalog with filtering",
+      "User authentication system",
+      "Order management",
+      "Responsive design",
+      "Admin dashboard"
+    ]
   },
-  live: "https://www.sevenscape.ae/"
-},
-
   {
     id: 2,
-    title: "TECHNOMAGIC SOLUTIONS INDIA PRIVATE LIMITED",
-    description:
-      "Official corporate website for IT solutions provider featuring service showcases, client portals, and interactive tech demonstrations. Implemented smooth animations and responsive layouts to enhance user engagement.",
-    tags: [
-      "React.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "GSAP",
-      "Responsive Design",
-    ],
-    image: technomagic,
-    github: "https://github.com/cloudqlobe/Technofrontend.git", // (or company private repo if applicable)
-    live: "https://www.technomagicsolutions.info/",
+    title: "Sevenscape General Contracting and Facility Management Services L.L.C",
+    shortTitle: "Sevenscape",
+    description: "Facility management company website with service showcase and contact system",
+    tags: ["React.js", "Tailwind CSS", "Responsive","Node.js","MongoDB","Express.js","Vercel"],
+    image: sevensc,
+    github: {
+      frontend: "https://github.com/farhanparru/SevenscapeGeneralContracting-LLC.git",
+      backend: "https://github.com/farhanparru/SevenscapeGeneralContracting-Backend.git"
+    },
+    live: "https://www.sevenscape.ae/"
   },
   {
     id: 3,
+    title: "TECHNOMAGIC SOLUTIONS INDIA PRIVATE LIMITED",
+    description: "Official corporate website for IT solutions provider featuring service showcases, client portals, and interactive tech demonstrations. Implemented smooth animations and responsive layouts to enhance user engagement.",
+    tags: ["React.js", "Tailwind CSS", "Framer Motion", "GSAP", "Responsive Design"],
+    image: technomagic,
+    github: "https://github.com/cloudqlobe/Technofrontend.git",
+    live: "https://www.technomagicsolutions.info/",
+  },
+  {
+    id: 4,
     title: "Emirates Gold DMCC",
-    description:
-      "A premium gold trading platform featuring real-time market data visualization, secure user authentication, and responsive trading dashboards. Designed to enhance customer engagement with intuitive navigation and seamless cross-device experience.",
+    description: "A premium gold trading platform featuring real-time market data visualization, secure user authentication, and responsive trading dashboards. Designed to enhance customer engagement with intuitive navigation and seamless cross-device experience.",
     tags: ["React.js", "Framer Motion", "Tailwind CSS", "Firebase", "Chart.js","Vercel"],
     image: emirates,
     github: "https://github.com/farhanparru/EmiratesGoldKSD.git",
     live: "https://emirates-gold-ksd-aflw.vercel.app/",
   },
-
   {
-    id: 4,
+    id: 5,
     title: "Cloud Qlobe Telecom",
-    description:
-      "Enterprise-grade telecommunications platform offering real-time network monitoring, customer management, and billing solutions. Features AI-powered analytics dashboard, secure API integrations, and multi-carrier support.",
-    tags: [
-      "React.js",
-      "Node.js",
-      "MongoDB Atlas",
-      "WebSockets",
-      "Tailwind CSS",
-      "AWS",
-    ],
-    image: cloud, // Make sure to add this image to your assets
-     github: {
-    frontend: "https://github.com/cloudqlobe/CloudQlobe-Frondent.git",
-    backend: "https://github.com/cloudqlobe/CloudQlobe-Backend.git"
-  },
+    description: "Enterprise-grade telecommunications platform offering real-time network monitoring, customer management, and billing solutions. Features AI-powered analytics dashboard, secure API integrations, and multi-carrier support.",
+    tags: ["React.js", "Node.js", "MongoDB Atlas", "WebSockets", "Tailwind CSS", "AWS"],
+    image: cloud,
+    github: {
+      frontend: "https://github.com/cloudqlobe/CloudQlobe-Frondent.git",
+      backend: "https://github.com/cloudqlobe/CloudQlobe-Backend.git"
+    },
     live: "https://www.cloudqlobe.com/",
     features: [
       "Real-time network topology visualization",
@@ -79,22 +84,12 @@ const projectsData = [
       "End-to-end encrypted communications",
     ],
   },
-
   {
-    id: 5,
+    id: 6,
     title: "Zeal Tours and Travels",
     shortTitle: "Zeal Tours",
-    description:
-      "Comprehensive travel agency platform with tour packages, booking system, and complete admin panel for managing bookings, customers, and inventory. Features secure payment integration and real-time availability updates.",
-    tags: [
-      "React.js",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Admin Panel",
-      "Payment Gateway",
-      "Responsive Design"
-    ],
+    description: "Comprehensive travel agency platform with tour packages, booking system, and complete admin panel for managing bookings, customers, and inventory. Features secure payment integration and real-time availability updates.",
+    tags: ["React.js", "Node.js", "Express", "MongoDB", "Admin Panel", "Payment Gateway", "Responsive Design"],
     image: zealTours,
     github: {
       frontend: "https://github.com/Sanjay9745/Zeal-Tourism.git",
@@ -112,75 +107,59 @@ const projectsData = [
       "Analytics and reporting"
     ]
   },
-
   {
-  id: 6,
-  title: "Everest Traders Inc",
-  shortTitle: "Everest Traders",
-  description: "Comprehensive e-commerce platform for international trading company featuring product catalogs, inquiry system, and multi-language support. Implemented secure authentication and responsive design for global clients.",
-  tags: [
-    "React.js",
-    "Tailwind CSS",
-    "Vercel",
-    "Responsive Design"
-  ],
-  image: everestTraders, // Make sure to add this image to your assets
-  github: {
-    frontend: "https://github.com/farhanparru/EVERESTTRADERS.git",
-
+    id: 7,
+    title: "Everest Traders Inc",
+    shortTitle: "Everest Traders",
+    description: "Comprehensive e-commerce platform for international trading company featuring product catalogs, inquiry system, and multi-language support. Implemented secure authentication and responsive design for global clients.",
+    tags: ["React.js", "Tailwind CSS", "Vercel", "Responsive Design"],
+    image: everestTraders,
+    github: {
+      frontend: "https://github.com/farhanparru/EVERESTTRADERS.git",
+    },
+    live: "https://everesttraders.vercel.app/",
+    features: [
+      "Multi-language support (English, Arabic, Chinese)",
+      "Product catalog with advanced filtering",
+      "Secure client inquiry system",
+      "Role-based user authentication",
+      "Responsive design for all devices",
+      "Interactive product showcase",
+      "Admin dashboard for content management"
+    ]
   },
-  live: "https://everesttraders.vercel.app/",
-  features: [
-    "Multi-language support (English, Arabic, Chinese)",
-    "Product catalog with advanced filtering",
-    "Secure client inquiry system",
-    "Role-based user authentication",
-    "Responsive design for all devices",
-    "Interactive product showcase",
-    "Admin dashboard for content management"
-  ]
-},
-
-{
-  id: 7,
-  title: "Aliya Senior Secondary School",
-  shortTitle: "Aliya School",
-  description: "Official website for Aliya Senior Secondary School featuring academic programs, admission information, school activities, and parent portal. Implemented with UAE-inspired design elements and responsive layouts for all devices.",
-  tags: [
-    "React.js",
-    "Tailwind CSS",
-    "Responsive Design",
-    "UAE Theme",
-    "Interactive Gallery",
-    "Vercel"
-  ],
-  image: aliyaSchool, // Make sure to import this image
-  github: {
-    frontend: "https://github.com/farhanparru/Aliya-Senior-Secondary-School.git",
-    // Add backend if applicable
-  },
-  live: "https://shcool-project.vercel.app/", // Update with actual live URL
-  features: [
-    "UAE-inspired color scheme and design",
-    "Interactive photo gallery",
-    "Admission form with validation",
-    "Responsive mobile-first design",
-    "Academic program showcase",
-    "School management section",
-    "Principal's message section",
-    "Chatbot support system",
-    "Event calendar integration",
-    "Parent portal (if implemented)"
-  ],
-  specialNotes: "This project incorporates cultural elements from the UAE while serving an Indian educational institution, creating a unique fusion design approach. The implementation includes a custom chatbot for student/parent inquiries."
-}
+  {
+    id: 8,
+    title: "Aliya Senior Secondary School",
+    shortTitle: "Aliya School",
+    description: "Official website for Aliya Senior Secondary School featuring academic programs, admission information, school activities, and parent portal. Implemented with UAE-inspired design elements and responsive layouts for all devices.",
+    tags: ["React.js", "Tailwind CSS", "Responsive Design", "UAE Theme", "Interactive Gallery", "Vercel"],
+    image: aliyaSchool,
+    github: {
+      frontend: "https://github.com/farhanparru/Aliya-Senior-Secondary-School.git",
+    },
+    live: "https://shcool-project.vercel.app/",
+    features: [
+      "UAE-inspired color scheme and design",
+      "Interactive photo gallery",
+      "Admission form with validation",
+      "Responsive mobile-first design",
+      "Academic program showcase",
+      "School management section",
+      "Principal's message section",
+      "Chatbot support system",
+      "Event calendar integration",
+      "Parent portal (if implemented)"
+    ],
+    specialNotes: "This project incorporates cultural elements from the UAE while serving an Indian educational institution, creating a unique fusion design approach. The implementation includes a custom chatbot for student/parent inquiries."
+  }
 ];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
-  const filters = ["All", "React.js", "Node.js", "Full Stack"];
+  const filters = ["All", "React.js", "Next.js", "Node.js", "Full Stack", "E-commerce"];
 
   const handleFilter = (item) => {
     setActiveFilter(item);
@@ -194,7 +173,20 @@ const Projects = () => {
   const filteredProjects =
     activeFilter === "All"
       ? projectsData
-      : projectsData.filter((project) => project.tags.includes(activeFilter));
+      : projectsData.filter((project) => 
+          project.tags.some(tag => 
+            tag.toLowerCase().includes(activeFilter.toLowerCase())
+          )
+        );
+
+  // Handle GitHub link click for projects with multiple repos
+  const handleGithubClick = (project, e) => {
+    if (typeof project.github === 'object') {
+      e.preventDefault();
+      // Open frontend repo by default, or you can implement a dropdown
+      window.open(project.github.frontend, '_blank');
+    }
+  };
 
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900">
@@ -253,7 +245,8 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-uaeNavy bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a
-                    href={project.github}
+                    href={typeof project.github === 'object' ? project.github.frontend : project.github}
+                    onClick={(e) => handleGithubClick(project, e)}
                     className="bg-white p-3 rounded-full text-uaeNavy hover:bg-uaeGold transition-colors"
                     target="_blank"
                     rel="noreferrer"
@@ -273,7 +266,7 @@ const Projects = () => {
 
               <div className="p-6">
                 <h3 className="text-xl font-bold text-uaeNavy dark:text-white mb-2">
-                  {project.title}
+                  {project.shortTitle || project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
