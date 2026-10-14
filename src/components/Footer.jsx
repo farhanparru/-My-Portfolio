@@ -1,182 +1,181 @@
-import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram,FaMapMarkerAlt,FaEnvelope ,FaPhoneAlt} from 'react-icons/fa';
-
-import { SiGmail } from 'react-icons/si';
+import React from "react";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaCode,
+  FaArrowUp,
+  FaDownload,
+} from "react-icons/fa";
+import cvPDF from "../assets/Muhammad-Shamin-Farhan-Full Stack Developer.pdf";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const featuredPlatforms = [
+    { name: "TradeAuct Luxury Marketplace", href: "https://tradeauct.com/" },
+    { name: "Montero Watch UAE", href: "https://www.monterowatch.com/en" },
+    { name: "Demarquee Watch UAE", href: "https://www.demarqueewatch.com/en" },
+    { name: "Montres.ae Luxury Watches", href: "https://www.montres.ae/" },
+    { name: "Cloud Qlobe Telecom", href: "https://www.cloudqlobe.com/" },
+    { name: "Sevenscape Facility Management", href: "https://www.sevenscape.ae/" },
+  ];
+
   return (
-    <footer className="bg-uaeNavy dark:bg-gray-900 text-white pt-16 pb-8 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <h3 className="text-2xl font-bold flex items-center">
-              <span className="text-uaeGold">Muhammad</span> Shamin
-            </h3>
-            <p className="text-gray-300">
-              Full Stack Developer based in Dubai, creating modern web experiences with cutting-edge technologies.
+    <footer className="bg-uaeNavyDark text-white pt-14 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 border-t border-uaeGold/20 relative overflow-hidden">
+      {/* Background glow accent */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-uaeGold/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-10 sm:mb-16">
+          {/* Brand & Summary Column */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-uaeGold flex items-center justify-center text-uaeNavy font-display font-black text-lg shadow-gold-glow">
+                SF
+              </div>
+              <div>
+                <h3 className="font-display font-black text-xl text-white">
+                  Muhammad Shamin Farhan
+                </h3>
+                <p className="text-xs text-uaeGold font-semibold">
+                  Full-Stack JavaScript Developer | React, Next.js & AI Integration
+                </p>
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md">
+              Full-Stack JavaScript Developer specializing in React.js, Next.js & AI Integration with ~3 years hands-on experience building production marketplace, e-commerce, ERP/POS, and business communication platforms for UAE and GCC markets.
             </p>
-            <div className="flex space-x-4 pt-2">
+
+            <div className="flex items-center gap-3 pt-2">
               {[
-                { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/in/shaminfarhan/" },
-                { icon: <FaGithub className="text-xl" />, url: "https://github.com/farhanparru" },
-                { icon: <FaTwitter className="text-xl" />, url: "https://twitter.com" },
-                { icon: <SiGmail className="text-xl" />, url: "mailto:farhan.dev24@gmail.com" }
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/shaminfarhan", label: "LinkedIn" },
+                { icon: <FaGithub />, href: "https://github.com/farhanparru", label: "GitHub" },
+                { icon: <FaCode />, href: "https://leetcode.com/u/shaminmuhammad116", label: "LeetCode" },
+                { icon: <FaEnvelope />, href: "mailto:farhan.dev24@gmail.com", label: "Email" },
+              ].map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.href}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -3, scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-uaeGold bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all"
+                  rel="noreferrer"
+                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-uaeGold hover:text-uaeNavy flex items-center justify-center text-gray-300 transition-all text-sm"
+                  aria-label={item.label}
                 >
-                  {social.icon}
-                </motion.a>
+                  {item.icon}
+                </a>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <h4 className="text-lg font-semibold text-uaeGold">Quick Links</h4>
-            <ul className="space-y-3">
-              {[
-                { name: "Home", url: "#home" },
-                { name: "About", url: "#about" },
-                { name: "Skills", url: "#skills" },
-                { name: "Projects", url: "#projects" },
-                { name: "Contact", url: "#contact" }
-              ].map((link, index) => (
-                <motion.li 
-                  key={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <a 
-                    href={link.url} 
-                    className="text-gray-300 hover:text-uaeGold transition-colors"
+          {/* Quick Nav Links */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="font-display font-bold text-sm text-uaeGold uppercase tracking-wider">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-xs text-gray-300 hover:text-uaeGold transition-colors flex items-center gap-1.5"
                   >
+                    <span className="text-[10px] text-uaeGold/60">▸</span>
                     {link.name}
                   </a>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <h4 className="text-lg font-semibold text-uaeGold">Services</h4>
-            <ul className="space-y-3">
-              {[
-                "Web Development",
-                "Mobile Applications",
-                "UI/UX Design",
-                "API Development",
-                "Cloud Solutions"
-              ].map((service, index) => (
-                <motion.li 
-                  key={index}
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="text-gray-300"
-                >
-                  {service}
-                </motion.li>
+          {/* Featured Systems */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="font-display font-bold text-sm text-uaeGold uppercase tracking-wider">
+              Featured Work
+            </h4>
+            <ul className="space-y-2.5">
+              {featuredPlatforms.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs text-gray-300 hover:text-uaeGold transition-colors flex items-center gap-1.5 truncate"
+                  >
+                    <span className="text-[10px] text-uaeGold/60">▸</span>
+                    {item.name}
+                  </a>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <h4 className="text-lg font-semibold text-uaeGold">Contact</h4>
-            <address className="not-italic space-y-3 text-gray-300">
-              <div className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-uaeGold mt-1" />
-                <p>Dubai, United Arab Emirates</p>
+          {/* Direct Contact Summary */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="font-display font-bold text-sm text-uaeGold uppercase tracking-wider">
+              Location
+            </h4>
+            <div className="space-y-2.5 text-xs text-gray-300">
+              <div className="flex items-start gap-2">
+                <FaMapMarkerAlt className="text-uaeRed mt-0.5 flex-shrink-0" />
+                <span>Sharjah / Dubai, UAE</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <FaEnvelope className="text-uaeGold" />
-                <a href="mailto:shamin@example.com" className="hover:text-uaeGold transition-colors">
-                 farhan.dev24@gmail.com
+              <div className="flex items-center gap-2">
+                <FaPhoneAlt className="text-uaeGold flex-shrink-0" />
+                <a href="tel:+971544237609" className="hover:text-uaeGold transition-colors">
+                  +971 54 423 7609
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <FaPhoneAlt className="text-uaeGold" />
-                <a href="tel:+971501234567" className="hover:text-uaeGold transition-colors">
-                  +971 55 638 4774
+              <div className="flex items-center gap-2">
+                <FaEnvelope className="text-uaeGold flex-shrink-0" />
+                <a href="mailto:farhan.dev24@gmail.com" className="hover:text-uaeGold transition-colors truncate">
+                  farhan.dev24
                 </a>
               </div>
-            </address>
-          </motion.div>
+            </div>
+
+            <a
+              href={cvPDF}
+              download="Muhammad_Farhan_Resume_UAE.pdf"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-uaeGold/15 border border-uaeGold/30 text-uaeGold text-xs font-bold hover:bg-uaeGold hover:text-uaeNavy transition-all mt-2"
+            >
+              <FaDownload className="w-3 h-3" />
+              <span>Download Resume (PDF)</span>
+            </a>
+          </div>
         </div>
 
-        {/* Divider */}
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="h-px bg-uaeGold bg-opacity-30 my-8"
-        />
+        {/* Bottom Bar & Copyright */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-400 text-center sm:text-left">
+            &copy; {currentYear} Muhammad Shamin Farhan. Crafted with React, Tailwind CSS & Framer Motion.
+          </p>
 
-        {/* Copyright & Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-gray-400 mb-4 md:mb-0"
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-uaeGold hover:text-uaeNavy text-xs font-semibold text-gray-300 transition-all border border-white/10"
+            aria-label="Back to Top"
           >
-            &copy; 2025 Muhammad Shamin Farhan. All rights reserved.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            viewport={{ once: true }}
-            className="flex space-x-6"
-          >
-            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-uaeGold transition-colors text-sm">
-              Cookies
-            </a>
-          </motion.div>
+            <span>Back to Top</span>
+            <FaArrowUp className="w-3 h-3" />
+          </button>
         </div>
       </div>
     </footer>

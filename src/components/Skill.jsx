@@ -1,282 +1,257 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
-  FaGitAlt,
   FaAws,
+  FaGitAlt,
   FaFigma,
-  FaMobileAlt,
-  FaApple,
-  FaAndroid, // Fixed Figma import
+  FaHtml5,
+  FaStripe,
+  FaBootstrap,
+  FaRobot,
 } from "react-icons/fa";
 import {
   SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
   SiRedux,
+  SiPostgresql,
   SiMongodb,
-  SiFirebase,
-  SiPostman,
-  SiJquery,
+  SiPrisma,
+  SiRedis,
+  SiTailwindcss,
   SiExpress,
+  SiPostman,
+  SiElectron,
+  SiVercel,
+  SiNginx,
+  SiDigitalocean,
+  SiSentry,
+  SiGoogleanalytics,
+  SiGraphql,
 } from "react-icons/si";
+import { FiCheck, FiCpu, FiServer, FiDatabase, FiCloud, FiCreditCard, FiTool, FiGlobe } from "react-icons/fi";
 
 const Skill = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        {
-          name: "React.js",
-          level: 95,
-          icon: <FaReact className="text-blue-500" />,
-        },
-        {
-          name: "TypeScript",
-          level: 85,
-          icon: <SiTypescript className="text-blue-600" />,
-        },
-        { name: "HTML5/CSS3", level: 98 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Vue.js", level: 75 },
-        { name: "JavaScript", level: 95 },
-        { name: "Bootstrap", level: 85 },
-        { name: "Sass", level: 80 },
-        { name: "SEO", level: 80 },
-      ],
-      color: "bg-blue-100",
-      textColor: "text-blue-800",
-    },
+  const [activeTab, setActiveTab] = useState("all");
 
+  const skillGroups = [
     {
-      title: "Mobile & Cross-platform",
+      id: "ai",
+      title: "AI & Machine Vision",
+      icon: <FaRobot className="text-purple-400" />,
+      description: "Practical generative AI, assistant architectures, watch identification, and computer vision.",
       skills: [
-        {
-          name: "Capacitor.js",
-          level: 80,
-          icon: <FaMobileAlt className="text-blue-500" />,
-        },
-        {
-          name: "iOS Application Development",
-          level: 75,
-          icon: <FaApple className="text-gray-800" />,
-        },
-        {
-          name: "Android Application Development",
-          level: 80,
-          icon: <FaAndroid className="text-green-500" />,
-        },
-        { name: "Android Studio", level: 78 },
+        { name: "Google Gemini API (In Progress)", icon: <FiCpu className="text-purple-400" />, level: "In Progress", desc: "Conversational shopping assistant & catalog grounding" },
+        { name: "AI Product Scanning", icon: <FiCheck className="text-emerald-400" />, level: "Production", desc: "Seller listing auto-recognition & detail extraction" },
+        { name: "Watch Identification AI", icon: <FiTool className="text-uaeGold" />, level: "Production", desc: "Image-based luxury timepiece model & dial detection" },
+        { name: "Image-Based Data Extraction", icon: <FiCpu className="text-sky-400" />, level: "Advanced", desc: "Automated OCR, image parsing, and structured data" },
+        { name: "Virtual Try-On Vision (R&D)", icon: <FiTool className="text-pink-400" />, level: "In Progress", desc: "Hand & wrist image capture with fit guidance" },
       ],
-      color: "bg-pink-100",
-      textColor: "text-pink-800",
     },
     {
-      title: "Backend",
+      id: "frontend",
+      title: "Frontend Engineering",
+      icon: <FiCpu className="text-uaeGold" />,
+      description: "Modern declarative UI, reactive state architectures, and responsive web systems.",
       skills: [
-        {
-          name: "Node.js",
-          level: 92,
-          icon: <FaNodeJs className="text-green-500" />,
-        },
-        { name: "Express.js", level: 88, icon: <SiExpress /> },
-        { name: "REST APIs", level: 90 },
-        { name: "MVC Architecture", level: 85 },
+        { name: "React.js", icon: <FaReact className="text-sky-400" />, level: "Expert", desc: "Hooks, Virtual DOM, Component Design" },
+        { name: "Next.js (SSR / SSG)", icon: <SiNextdotjs className="text-black dark:text-white" />, level: "Expert", desc: "SSR, SSG, Server Actions, Dynamic Routing" },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-500" />, level: "Advanced", desc: "Type safety, Generics, Interfaces" },
+        { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-amber-400" />, level: "Expert", desc: "Async/Await, Closures, Event Loop" },
+        { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" />, level: "Advanced", desc: "Global state, RTK Query, Slices" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" />, level: "Expert", desc: "Design systems, Responsive Layouts" },
+        { name: "HTML5 & CSS3", icon: <FaHtml5 className="text-orange-500" />, level: "Expert", desc: "Semantic tags, Flexbox, CSS Grid" },
+        { name: "Bootstrap & Responsive UI", icon: <FaBootstrap className="text-indigo-500" />, level: "Advanced", desc: "Figma-to-code UI implementation" },
       ],
-      color: "bg-green-100",
-      textColor: "text-green-800",
     },
     {
-      title: "State Management",
+      id: "backend",
+      title: "Backend & Systems Design",
+      icon: <FiServer className="text-emerald-500" />,
+      description: "Robust RESTful APIs, high-throughput microservices, and secure authentication.",
       skills: [
-        {
-          name: "Redux Toolkit",
-          level: 88,
-          icon: <SiRedux className="text-purple-500" />,
-        },
-        { name: "Context API", level: 85 },
+        { name: "Node.js", icon: <FaNodeJs className="text-emerald-500" />, level: "Expert", desc: "Event-driven runtime, Streams, Concurrency" },
+        { name: "Express.js", icon: <SiExpress className="text-gray-700 dark:text-gray-300" />, level: "Expert", desc: "Routing, Middleware, Error Handling" },
+        { name: "REST API Design", icon: <SiPostman className="text-orange-500" />, level: "Expert", desc: "Scalable endpoint design, Versioning, Swagger" },
+        { name: "Prisma ORM", icon: <SiPrisma className="text-teal-500" />, level: "Advanced", desc: "Schema modeling, Migrations, Type-safe queries" },
+        { name: "Auth & OAuth 2.0", icon: <FiServer className="text-yellow-500" />, level: "Expert", desc: "JWT, Google OAuth 2.0, Session Security" },
+        { name: "API Validation", icon: <FiCheck className="text-emerald-400" />, level: "Advanced", desc: "Request schema validation, Error normalization" },
+        { name: "UAE PASS Authentication", icon: <FiCheck className="text-emerald-400" />, level: "Advanced", desc: "UAE National Digital ID & KYC integration" },
+        { name: "WebSockets & WebRTC", icon: <FiCpu className="text-purple-400" />, level: "Advanced", desc: "Real-time bidirectional telecom & auction bidding" },
       ],
-      color: "bg-purple-100",
-      textColor: "text-purple-800",
     },
     {
-      title: "Databases",
+      id: "database",
+      title: "Databases & Background Queues",
+      icon: <FiDatabase className="text-sky-500" />,
+      description: "Relational and document storage schemas with distributed caching and message queues.",
       skills: [
-        {
-          name: "MongoDB",
-          level: 85,
-          icon: <SiMongodb className="text-green-600" />,
-        },
-        { name: "MySQL", level: 80 },
-        { name: "MongoDB Atlas", level: 83 },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-500" />, level: "Expert", desc: "ACID transactions, Schema design, Indexing" },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-500" />, level: "Expert", desc: "Document aggregation pipelines, Sharding, Atlas" },
+        { name: "Redis", icon: <SiRedis className="text-red-500" />, level: "Advanced", desc: "In-memory caching, Pub/Sub, Session storage" },
+        { name: "BullMQ (Background Jobs)", icon: <SiRedis className="text-amber-500" />, level: "Advanced", desc: "Asynchronous background job queues & workers" },
+        { name: "Prisma Schema Design", icon: <SiPrisma className="text-teal-400" />, level: "Advanced", desc: "Relational modeling & migration management" },
       ],
-      color: "bg-amber-100",
-      textColor: "text-amber-800",
     },
     {
-      title: "DevOps & Cloud",
+      id: "cloud",
+      title: "Cloud Infrastructure & DevOps",
+      icon: <FiCloud className="text-amber-500" />,
+      description: "Cloud hosting, continuous delivery, reverse proxies, and server maintenance.",
       skills: [
-        {
-          name: "AWS (EC2/S3)",
-          level: 75,
-          icon: <FaAws className="text-yellow-600" />,
-        },
-        {
-          name: "Firebase",
-          level: 80,
-          icon: <SiFirebase className="text-orange-500" />,
-        },
-        { name: "Vercel", level: 85 },
-        { name: "Nginx", level: 70 },
-        { name: "DigitalOcean", level: 78 },
-        { name: "Hostinger", level: 75 },
-        { name: "Firewall Configuration", level: 80 },
+        { name: "AWS EC2", icon: <FaAws className="text-amber-500" />, level: "Advanced", desc: "Compute instances, Linux administration, Security Groups" },
+        { name: "AWS S3", icon: <FaAws className="text-amber-500" />, level: "Advanced", desc: "Cloud object storage, Media bucket policies & CDN" },
+        { name: "AWS RDS PostgreSQL", icon: <FaAws className="text-amber-500" />, level: "Advanced", desc: "Managed cloud databases, Automated backups & replicas" },
+        { name: "Nginx", icon: <SiNginx className="text-emerald-500" />, level: "Advanced", desc: "Reverse proxy, SSL termination, Load balancing" },
+        { name: "DigitalOcean", icon: <SiDigitalocean className="text-blue-400" />, level: "Advanced", desc: "Droplets, Managed DBs, DNS configuration" },
+        { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" />, level: "Expert", desc: "Edge serverless deployment & CI/CD automation" },
       ],
-      color: "bg-red-100",
-      textColor: "text-red-800",
     },
     {
-      title: "Tools & Utilities",
+      id: "integrations",
+      title: "Payments, Logistics & APIs",
+      icon: <FiCreditCard className="text-uaeGold" />,
+      description: "Enterprise payment gateways, GCC courier APIs, and marketplace integrations.",
       skills: [
-        {
-          name: "Git/GitHub",
-          level: 90,
-          icon: <FaGitAlt className="text-gray-800" />,
-        },
-        {
-          name: "Postman",
-          level: 88,
-          icon: <SiPostman className="text-orange-500" />,
-        },
-        {
-          name: "Figma",
-          level: 75,
-          icon: <FaFigma className="text-pink-500" />,
-        },
-        {
-          name: "jQuery",
-          level: 65,
-          icon: <SiJquery className="text-blue-400" />,
-        },
+        { name: "Stripe Payment Architecture", icon: <FaStripe className="text-indigo-400" />, level: "Expert", desc: "Escrow holding, Seller payouts, Wallets, Webhooks" },
+        { name: "Tamara & Tabby (BNPL)", icon: <FiCreditCard className="text-pink-500" />, level: "Advanced", desc: "GCC Buy-Now-Pay-Later payment integration" },
+        { name: "DHL Courier API", icon: <FiTool className="text-yellow-500" />, level: "Advanced", desc: "Worldwide automated label generation & tracking" },
+        { name: "Mawgood & Trend Delivery", icon: <FiTool className="text-blue-500" />, level: "Advanced", desc: "UAE & GCC regional delivery network APIs" },
+        { name: "eBay API Integration", icon: <FiTool className="text-blue-400" />, level: "Advanced", desc: "Automated seller product sync & catalog ingestion" },
+        { name: "MaxMind GeoIP", icon: <FiGlobe className="text-blue-400" />, level: "Advanced", desc: "Country detection & location-aware checkout" },
+        { name: "GraphQL", icon: <SiGraphql className="text-pink-500" />, level: "Basic Hands-On", desc: "Basic hands-on querying & data retrieval" },
       ],
-      color: "bg-indigo-100",
-      textColor: "text-indigo-800",
+    },
+    {
+      id: "tools",
+      title: "Mobile, Testing & Modern Tools",
+      icon: <FiTool className="text-purple-400" />,
+      description: "Mobile exploration, hardware interfacing, telemetry, and tracking.",
+      skills: [
+        { name: "React Native (Exploratory)", icon: <FaReact className="text-sky-400" />, level: "Exploring", desc: "Researching iOS & Android cross-platform mobile" },
+        { name: "NFC Watch Verification", icon: <FiCheck className="text-uaeGold" />, level: "Advanced", desc: "Cryptographic NFC tap-to-verify digital authenticity" },
+        { name: "GA4 & Enhanced E-Commerce", icon: <SiGoogleanalytics className="text-amber-500" />, level: "Expert", desc: "E-commerce funnel analytics, Custom event triggers" },
+        { name: "Meta Pixel & Conversions API", icon: <FiCheck className="text-blue-500" />, level: "Expert", desc: "Server-side tracking & pixel event deduplication" },
+        { name: "Google Merchant Center & SEO", icon: <FiGlobe className="text-emerald-400" />, level: "Advanced", desc: "Product feed sync & Multilingual (Arabic/En) SEO" },
+        { name: "Electron.js Desktop ERP", icon: <SiElectron className="text-teal-400" />, level: "Advanced", desc: "Cross-platform desktop POS & receipt printer hardware" },
+        { name: "Playwright & Sentry", icon: <SiSentry className="text-red-400" />, level: "Advanced", desc: "Production error telemetry & automated testing" },
+        { name: "Git, GitHub & GitLab", icon: <FaGitAlt className="text-orange-500" />, level: "Expert", desc: "Version control, Branching strategies, CI/CD" },
+        { name: "Figma & Canva", icon: <FaFigma className="text-pink-400" />, level: "Advanced", desc: "UI/UX wireframing, Prototyping, Visual asset creation" },
+      ],
     },
   ];
 
+  const displayedGroups =
+    activeTab === "all"
+      ? skillGroups
+      : skillGroups.filter((g) => g.id === activeTab);
+
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-white dark:bg-gray-900">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50 dark:bg-darkBg/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-uaeGold">Technical Skills</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-uaeGold/10 border border-uaeGold/30 text-uaeGold text-xs font-bold uppercase tracking-wider mb-3">
+            Technical Arsenal
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-uaeNavy dark:text-white tracking-tight">
+            Core Technical <span className="text-uaeGold">Skills & Expertise</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here's a comprehensive overview of my technical capabilities across
-            different domains
+          <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300">
+            A comprehensive overview of the technologies, cloud infrastructure, payment gateways, and tools I use to build mission-critical enterprise systems.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
+        {/* Tab Filters */}
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12">
+          <button
+            onClick={() => setActiveTab("all")}
+            className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              activeTab === "all"
+                ? "bg-uaeGold text-uaeNavy shadow-gold-glow"
+                : "bg-white dark:bg-darkCard text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            }`}
+          >
+            All Disciplines
+          </button>
+          {skillGroups.map((group) => (
+            <button
+              key={group.id}
+              onClick={() => setActiveTab(group.id)}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 ${
+                activeTab === group.id
+                  ? "bg-uaeGold text-uaeNavy shadow-gold-glow"
+                  : "bg-white dark:bg-darkCard text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              <span>{group.title.split(" ")[0]}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Skill Groups Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {displayedGroups.map((group, idx) => (
             <motion.div
-              key={index}
+              key={group.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`rounded-xl p-6 shadow-lg ${category.color} dark:bg-gray-800`}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="glass-card p-4 sm:p-6 rounded-2xl border border-gray-200/80 dark:border-gray-800 hover:border-uaeGold transition-all duration-300 shadow-sm hover:shadow-gold-glow flex flex-col justify-between"
             >
-              <h3
-                className={`text-xl font-semibold mb-4 ${category.textColor} dark:text-white`}
-              >
-                {category.title}
-              </h3>
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="flex items-center space-x-2">
-                        {skill.icon || (
-                          <div className="w-4 h-4 rounded-full bg-gray-400"></div>
-                        )}
-                        <span className="font-medium text-gray-800 dark:text-gray-200">
-                          {skill.name}
-                        </span>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2.5 rounded-xl bg-uaeNavy dark:bg-darkAccent text-xl">
+                    {group.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-lg text-uaeNavy dark:text-white">
+                      {group.title}
+                    </h3>
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400">
+                      {group.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3 mt-5">
+                  {group.skills.map((skill, sIdx) => (
+                    <div
+                      key={sIdx}
+                      className="p-2.5 rounded-xl bg-gray-50/80 dark:bg-darkCard/60 border border-gray-100 dark:border-gray-800 hover:border-uaeGold/40 transition-colors flex items-center justify-between gap-3"
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="text-xl flex-shrink-0">{skill.icon}</div>
+                        <div className="min-w-0">
+                          <div className="font-bold text-xs sm:text-sm text-gray-800 dark:text-gray-200 truncate">
+                            {skill.name}
+                          </div>
+                          {skill.desc && (
+                            <div className="text-[11px] text-gray-500 dark:text-gray-400 truncate">
+                              {skill.desc}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">
-                        {skill.level}%
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-uaeGold/10 text-uaeGold flex-shrink-0">
+                        {skill.level}
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                        viewport={{ once: true }}
-                        className={`h-2 rounded-full ${category.textColor.replace(
-                          "text",
-                          "bg"
-                        )}`}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Familiar With Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-uaeGold bg-opacity-10 dark:bg-opacity-20 p-6 rounded-xl"
-        >
-          <h3 className="text-2xl font-semibold text-uaeNavy dark:text-uaeGold mb-4">
-            Also Familiar With
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {[
-              "Figma",
-              "Nodemailer",
-              "Multer",
-              "Material UI",
-              "AOS Animate",
-              "React Three Fiber",
-              "Framer Motion",
-              "GSAP",
-              "Stripe",
-              "Twilio API",
-              "JWT",
-              "Cloudinary",
-              "Sentry",
-              "Playwright",
-              "Canva",
-              "Electron.js",
-              "WebSocket",
-              "WebRTC",
-              "PWA",
-              "Clean Architecture",
-            ].map((tech, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-sm text-sm font-medium text-uaeNavy dark:text-gray-200 flex items-center"
-              >
-                {tech}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
