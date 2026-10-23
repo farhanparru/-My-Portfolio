@@ -12,22 +12,24 @@ import {
   FaCode,
   FaAws,
   FaRobot,
+  FaMobileAlt,
+  FaInstagram,
 } from "react-icons/fa";
-import { SiPostgresql, SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 import { FiArrowUpRight, FiCheckCircle } from "react-icons/fi";
 
 const Hero = ({ darkMode }) => {
   const stats = [
-    { label: "Hands-On JS Experience", value: "~3 Yrs", detail: "React, Next.js & Node.js" },
-    { label: "Production Platforms", value: "10+", detail: "UAE & GCC Enterprise" },
-    { label: "AI & Innovation", value: "Gemini AI", detail: "Shopping Assistant & Vision" },
-    { label: "FTTH Infrastructure", value: "5,000+", detail: "Dubai & Sharjah Units" },
+    { label: "Hands-On Experience", value: "~3 Yrs", detail: "React, Next.js & Full-Stack JS" },
+    { label: "UAE Production Platforms", value: "4+ Core", detail: "TradeAuct, Montres, Montero, Demarquee" },
+    { label: "AI & Mobile Engineering", value: "Gemini & RN", detail: "Vision Scan, Assistant & iOS/Android" },
+    { label: "Active Products & Scale", value: "1,500+", detail: "1,100+ Products & 645+ Users" },
   ];
 
   const floatingBadges = [
     { name: "Next.js (SSR/SSG)", icon: <SiNextdotjs className="text-black dark:text-white" />, pos: "-top-3 -left-2 sm:-left-4" },
-    { name: "Gemini AI & Vision", icon: <FaRobot className="text-purple-400" />, pos: "-top-3 -right-2 sm:-right-4" },
-    { name: "PostgreSQL & Prisma", icon: <SiPostgresql className="text-sky-500" />, pos: "bottom-8 sm:bottom-12 -left-2 sm:-left-8" },
+    { name: "Gemini 2.5 Flash & AI", icon: <FaRobot className="text-purple-400" />, pos: "-top-3 -right-2 sm:-right-4" },
+    { name: "React Native (iOS/Android)", icon: <FaMobileAlt className="text-sky-400" />, pos: "bottom-8 sm:bottom-12 -left-2 sm:-left-8" },
     { name: "AWS EC2/S3/RDS", icon: <FaAws className="text-amber-500" />, pos: "bottom-8 sm:bottom-12 -right-2 sm:-right-8" },
   ];
 
@@ -70,9 +72,11 @@ const Hero = ({ darkMode }) => {
                   2200,
                   "React.js & Next.js Specialist",
                   2200,
-                  "AI Integration & Google Gemini API",
+                  "AI Integration & Google Gemini 2.5",
                   2200,
-                  "Node.js, Express & PostgreSQL Engineer",
+                  "React Native Mobile App Engineer",
+                  2200,
+                  "Node.js, Express & PostgreSQL Architect",
                   2200,
                   "Luxury E-Commerce & Live Auctions",
                   2200,
@@ -87,7 +91,7 @@ const Hero = ({ darkMode }) => {
             </div>
 
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Full-Stack JavaScript developer specializing in <strong className="text-uaeNavy dark:text-uaeGold">React.js, Next.js & AI Integration</strong> with approximately <strong className="text-uaeNavy dark:text-uaeGold">3 years</strong> of combined hands-on experience building production marketplace, e-commerce, ERP/POS, and business communication platforms for the UAE and GCC markets.
+              Full-Stack JavaScript developer specializing in <strong className="text-uaeNavy dark:text-uaeGold">React.js and Next.js</strong>, with approximately <strong className="text-uaeNavy dark:text-uaeGold">3 years</strong> of combined hands-on development experience building production marketplace, e-commerce, ERP/POS, and business communication platforms for the UAE and GCC markets, and a <strong className="text-uaeNavy dark:text-uaeGold">React Native mobile app for iOS and Android</strong> (store release pending). Practical AI integration through <strong className="text-uaeNavy dark:text-uaeGold">Gemini-powered watch photo scanning</strong>, and currently developing a <strong className="text-uaeNavy dark:text-uaeGold">Google Gemini API shopping assistant</strong>.
             </p>
 
             {/* CTA Buttons */}
@@ -124,12 +128,14 @@ const Hero = ({ darkMode }) => {
               </motion.a>
             </div>
 
-            {/* Social Links & LeetCode */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 pt-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Connect:</span>
+            {/* Social Links & Profiles */}
+            <div className="flex items-center justify-center lg:justify-start gap-2.5 pt-2 flex-wrap">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-400 mr-1">Connect:</span>
               {[
                 { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/shaminfarhan", label: "LinkedIn" },
                 { icon: <FaGithub />, href: "https://github.com/farhanparru", label: "GitHub" },
+                { icon: <FaInstagram />, href: "https://www.instagram.com/shaminfarhan.dev/", label: "Instagram (@shaminfarhan.dev)" },
+                { icon: <FaInstagram className="text-uaeGold" />, href: "https://www.instagram.com/emirnex.tech/", label: "Emirnex Tech Startup (@emirnex.tech)" },
                 { icon: <FaCode />, href: "https://leetcode.com/u/shaminmuhammad116", label: "LeetCode" },
                 { icon: <FaEnvelope />, href: "mailto:farhan.dev24@gmail.com", label: "Email" },
               ].map((item, idx) => (

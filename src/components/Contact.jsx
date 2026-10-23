@@ -9,8 +9,9 @@ import {
   FaLinkedin,
   FaGithub,
   FaCode,
+  FaInstagram,
 } from "react-icons/fa";
-import { FiCheckCircle, FiCopy, FiCheck } from "react-icons/fi";
+import { FiCheckCircle, FiCopy, FiCheck, FiArrowUpRight } from "react-icons/fi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -173,7 +174,42 @@ const Contact = () => {
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-white/20 flex items-center justify-between">
+              {/* Startup & Personal Instagram Spotlights */}
+              <div className="pt-3 border-t border-white/15 grid grid-cols-2 gap-3">
+                <a
+                  href="https://www.instagram.com/emirnex.tech/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group block"
+                >
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-uaeGold flex items-center justify-between">
+                    <span>Our Startup</span>
+                    <FiArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                  <div className="text-xs font-bold text-white flex items-center gap-1.5 mt-1 truncate">
+                    <FaInstagram className="text-uaeGold flex-shrink-0" />
+                    <span className="truncate">@emirnex.tech</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/shaminfarhan.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition-all group block"
+                >
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-gray-300 flex items-center justify-between">
+                    <span>Developer</span>
+                    <FiArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                  <div className="text-xs font-bold text-white flex items-center gap-1.5 mt-1 truncate">
+                    <FaInstagram className="text-pink-400 flex-shrink-0" />
+                    <span className="truncate">@shaminfarhan.dev</span>
+                  </div>
+                </a>
+              </div>
+
+              <div className="pt-3 border-t border-white/20 flex items-center justify-between">
                 <span className="text-xs font-semibold text-gray-300">Official Profiles:</span>
                 <div className="flex items-center gap-2">
                   <a
@@ -193,6 +229,24 @@ const Contact = () => {
                     title="GitHub"
                   >
                     <FaGithub />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/shaminfarhan.dev/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 rounded-lg bg-white/10 hover:bg-uaeGold hover:text-uaeNavy transition-all text-sm"
+                    title="Instagram: @shaminfarhan.dev"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/emirnex.tech/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 rounded-lg bg-white/10 hover:bg-uaeGold hover:text-uaeNavy transition-all text-sm"
+                    title="Startup: @emirnex.tech"
+                  >
+                    <FaInstagram className="text-uaeGold" />
                   </a>
                   <a
                     href="https://leetcode.com/u/shaminmuhammad116"

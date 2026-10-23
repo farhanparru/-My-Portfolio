@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FiCpu,
-  FiUsers,
   FiShield,
   FiGlobe,
   FiBookOpen,
   FiCheck,
+  FiSmartphone,
 } from "react-icons/fi";
 
 const About = () => {
@@ -14,22 +14,22 @@ const About = () => {
     {
       icon: <FiCpu className="w-6 h-6 text-uaeGold" />,
       title: "Full-Stack JavaScript Architecture",
-      desc: "Delivering complete end-to-end architectures across Next.js (SSR/SSG), React, Node.js/Express, PostgreSQL, MongoDB, Prisma ORM, Redis, BullMQ, and AWS.",
+      desc: "Delivering complete end-to-end architectures across Next.js (SSR/SSG), React.js, Node.js, Express.js, PostgreSQL, MongoDB, Prisma ORM, Redis, BullMQ, and AWS.",
+    },
+    {
+      icon: <FiSmartphone className="w-6 h-6 text-uaeGold" />,
+      title: "Mobile Development (React Native & Expo)",
+      desc: "Architected the Montres luxury watch app for iOS & Android with Expo Router, Virtual Watch Try-On studio, ISO ID-1 card true-to-size calibration, and 46 passing unit tests.",
     },
     {
       icon: <FiShield className="w-6 h-6 text-uaeGold" />,
       title: "Practical AI & Computer Vision",
-      desc: "Integrating Google Gemini API shopping assistant, AI-assisted product scanning & watch identification, and automated image-based data extraction.",
+      desc: "Integrated Google Gemini API (Gemini 2.5 Flash with fallback) for watch photo scanning and attribute extraction in TradeAuct; developing conversational shopping assistant.",
     },
     {
       icon: <FiGlobe className="w-6 h-6 text-uaeGold" />,
       title: "UAE & GCC Regional Ecosystem",
-      desc: "Experienced with UAE PASS Authentication, Tabby/Tamara BNPL, Stripe payments, DHL, Mawgood, Trend shipping APIs, and bilingual (Arabic/English) SEO.",
-    },
-    {
-      icon: <FiUsers className="w-6 h-6 text-uaeGold" />,
-      title: "Real-Time & Systems Engineering",
-      desc: "Engineered NFC-based digital product authentication, WebRTC telecom streaming, WebSockets live bidding, BullMQ background queues, and POS printer hardware.",
+      desc: "Experienced with UAE PASS Authentication, eBay API, Stripe wallet/escrow payouts, Tabby & Tamara BNPL, DHL, Mawgood, Trend logistics, and MaxMind GeoIP.",
     },
   ];
 
@@ -45,17 +45,17 @@ const About = () => {
       role: "Full-Stack / MERN Development Trainee",
       org: "Bridgeon Solutions LLP",
       period: "Sep 2023 – Jun 2024 (~10 months)",
-      detail: "Practical, hands-on full-stack development training, complex database architecture, and project certifications.",
+      detail: "Hands-on full-stack training, complex database schema design, and project certifications (Certificate).",
     },
     {
-      role: "Software Development Training",
+      role: "Practical Software Development Experience",
       org: "Packapeer Academy (Brototype Program)",
       period: "Feb 2023 – Sep 2023 (~7 months)",
-      detail: "Intensive training in programming fundamentals, C++, Java, data structures, and core software development concepts.",
+      detail: "Real-time projects, intensive programming fundamentals, C++, Java, data structures, and core software engineering.",
     },
     {
       role: "Higher Secondary Certificate (HSC)",
-      org: "National Institute of Open Schooling (NIOS)",
+      org: "National Institute of Open Schooling (NIOS), India",
       period: "2023",
       detail: "Completed higher secondary curriculum.",
     },
@@ -79,7 +79,7 @@ const About = () => {
             Engineering High-Performance <span className="text-uaeGold">Production Systems</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Full-Stack JavaScript developer specializing in <strong className="text-uaeNavy dark:text-uaeGold">React.js, Next.js & AI Integration</strong> with approximately 3 years of combined hands-on development experience in full-stack JavaScript, building production marketplace, e-commerce, ERP/POS, and business communication platforms for the UAE and GCC markets. Experienced in practical AI integration including AI-assisted product scanning, watch identification, and currently developing a Google Gemini API shopping assistant.
+            Full-Stack JavaScript developer specializing in <strong className="text-uaeNavy dark:text-uaeGold">React.js and Next.js</strong>, with approximately <strong className="text-uaeNavy dark:text-uaeGold">3 years of combined hands-on development experience</strong> (project-based practice, training, part-time and full-time employment), building production marketplace, e-commerce, ERP/POS, and business communication platforms for the UAE and GCC markets, and a <strong className="text-uaeNavy dark:text-uaeGold">React Native mobile app for iOS and Android</strong> (store release pending). Hands-on with UI/UX implementation from Figma designs, REST APIs, Node.js, PostgreSQL/MongoDB, and third-party integrations. Practical AI integration through Gemini-powered watch photo scanning, and currently developing a Google Gemini API shopping assistant. Works as a Full-Stack JavaScript Developer at <strong className="text-uaeNavy dark:text-white">Smart Supply Portal Est.</strong>, contributing to platforms including the TradeAuct luxury marketplace and live auction platform.
           </p>
         </motion.div>
 
