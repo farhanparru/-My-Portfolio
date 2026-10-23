@@ -17,72 +17,73 @@ const Experience = () => {
       period: "Oct 2025 – Present",
       isCurrent: true,
       description:
-        "Develop full-stack features for a UAE-focused business discovery and B2B sourcing platform across frontend, backend, and database layers.",
+        "Leading end-to-end full-stack feature development across B2B sourcing, luxury e-commerce, and live auction platforms for the UAE & GCC markets.",
       highlights: [
-        "Build and deploy client-facing production platforms, including TradeAuct's marketplace ecosystem and luxury e-commerce brand platforms.",
-        "Designed backend APIs, database architecture, authentication, and admin tooling for platform data management; debugged and resolved backend and database issues through root-cause analysis to maintain reliability.",
-        "Debug production issues, support deployment, and maintain live platforms across AWS EC2, S3, RDS PostgreSQL, and Redis/BullMQ.",
+        "Develop full-stack features for a UAE business discovery and B2B sourcing platform across frontend, backend and database layers.",
+        "Develop and deploy features across four production platforms: TradeAuct (marketplace and live auctions), Montero Watch, Demarquee Watch, and Montres.ae (luxury e-commerce), each with an admin panel.",
+        "Design REST APIs, database schemas, authentication, and payment and shipping integrations; resolve production, deployment, and database issues through root-cause analysis.",
       ],
       skills: [
-        "React.js",
         "Next.js",
+        "React.js",
         "Node.js",
         "PostgreSQL",
         "Prisma ORM",
         "Redis",
         "BullMQ",
+        "AWS (EC2/S3/RDS)",
         "Stripe",
-        "AWS EC2/S3/RDS",
+        "Gemini 2.5 Flash",
         "UAE PASS",
-        "AI Vision Scanner",
+        "MaxMind GeoIP",
       ],
-    },
-    {
-      role: "Software Developer",
-      company: "TechnoMagic Solutions (Cloud Qlobe)",
-      location: "Telecom / VoIP",
-      type: "Part-Time",
-      period: "Jan 2025 – Jun 2025",
-      isCurrent: false,
-      description:
-        "Developed and maintained full-stack features for Cloud Qlobe, a cloud telephony and business communication platform for corporate clients.",
-      highlights: [
-        "Built full-stack features using React.js, TypeScript, Node.js, and MongoDB.",
-        "Implemented WebRTC-based real-time voice/video communication functionality and integrated third-party APIs.",
-        "Troubleshot platform reliability issues, resolving API failures and backend errors reported in production.",
-      ],
-      skills: ["React.js", "TypeScript", "Node.js", "MongoDB", "WebRTC", "WebSockets", "VoIP APIs"],
     },
     {
       role: "Full-Stack Developer",
-      company: "TYEM Ventures Pvt Ltd",
-      location: "Full-Time",
-      type: "Full-Time",
-      period: "Jul 2024 – Dec 2024",
+      company: "Technomagic Solutions India Pvt Ltd (Cloud Qlobe)",
+      location: "India (Remote)",
+      type: "Part-Time",
+      period: "Jan 2025 – May 2025",
       isCurrent: false,
       description:
-        "Developed a cross-platform Electron.js ERP/POS billing application with online/offline operation and real-time processing.",
+        "Delivered full-stack capabilities, cloud telephony features, and real-time communication modules for an enterprise VoIP communications platform.",
       highlights: [
-        "Developed a cross-platform Electron.js ERP/POS billing application with online/offline operation.",
+        "Developed and maintained full-stack features (React.js, TypeScript, Node.js, MongoDB) and API integrations for Cloud Qlobe, a cloud telephony platform.",
+        "Troubleshot platform reliability issues, resolving API failures and backend errors reported in production.",
+        "Implemented WebRTC-based real-time voice and video communication workflows to support corporate client workflows.",
+      ],
+      skills: ["React.js", "TypeScript", "Node.js", "MongoDB", "WebRTC", "REST APIs", "Cloud Telephony"],
+    },
+    {
+      role: "Software Developer",
+      company: "TYEM Ventures Pvt Ltd",
+      location: "Kerala, India",
+      type: "Full-Time",
+      period: "Aug 2024 – Jan 2025",
+      isCurrent: false,
+      description:
+        "Engineered a resilient hybrid offline/online POS & ERP billing system with POS hardware peripherals and automated ordering workflows.",
+      highlights: [
+        "Built and maintained a cross-platform ERP/POS billing application using Electron.js and PWA technology, with online/offline operation.",
         "Integrated receipt-printer hardware, WhatsApp Catalog, and webhook-based order processing.",
         "Built custom XpressBot integration to process online orders in real time, along with order and delivery assignment workflows.",
       ],
-      skills: ["Electron.js", "Node.js", "WebSockets", "Hardware POS", "WhatsApp Catalog", "Webhooks", "MongoDB"],
+      skills: ["Electron.js", "PWA", "Node.js", "Hardware POS", "WhatsApp Catalog", "Webhooks", "XpressBot", "MongoDB"],
     },
     {
       role: "Freelance Infrastructure Project",
       company: "Sevenscape",
       location: "Dubai & Sharjah, UAE",
-      type: "Infrastructure Delivery",
-      period: "Infrastructure Delivery",
+      type: "Freelance / Contract",
+      period: "Project Engagement",
       isCurrent: false,
       description:
-        "Delivered an FTTH fiber deployment across Dubai and Sharjah, enabling high-speed connectivity for residential and commercial complexes.",
+        "Directed an FTTH fiber infrastructure deployment project across residential and commercial developments in Dubai and Sharjah.",
       highlights: [
-        "Enabled high-speed internet for 5,000+ units across Dubai and Sharjah.",
+        "Delivered an FTTH fiber deployment across Dubai and Sharjah, enabling high-speed internet for 5,000+ units.",
         "Coordinated 10+ vendor/client relationships, delivering the project 15% under budget.",
       ],
-      skills: ["FTTH Infrastructure", "Vendor Coordination", "Project Delivery", "Budget Optimization"],
+      skills: ["FTTH Fiber Infrastructure", "Vendor Coordination", "Project Delivery", "Budget Optimization"],
     },
   ];
 
@@ -157,6 +158,11 @@ const Experience = () => {
                       <FiMapPin className="text-uaeRed" />
                       {exp.location}
                     </span>
+                    {exp.type && (
+                      <span className="bg-uaeGold/10 text-uaeNavy dark:text-uaeGold border border-uaeGold/30 px-2.5 py-1.5 rounded-lg">
+                        {exp.type}
+                      </span>
+                    )}
                   </div>
                 </div>
 

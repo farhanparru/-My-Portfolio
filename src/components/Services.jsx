@@ -5,9 +5,9 @@ import {
   FiServer,
   FiCpu,
   FiCloud,
-  FiShield,
   FiCreditCard,
   FiArrowRight,
+  FiSmartphone,
 } from "react-icons/fi";
 
 const Services = () => {
@@ -16,72 +16,72 @@ const Services = () => {
       icon: <FiShoppingCart className="w-6 h-6 text-uaeGold" />,
       title: "Luxury E-Commerce & Marketplaces",
       description:
-        "Architecting multi-vendor marketplaces, live auction engines, seller dashboards, and high-conversion e-commerce storefronts tailored for the GCC luxury market.",
+        "Architecting multi-application marketplace ecosystems, live auction bidding engines, seller dashboards, and high-conversion luxury storefronts tailored for the GCC and international markets.",
       features: [
-        "Live auction engines with real-time bidding",
-        "Multi-vendor & seller wallet payout architectures",
+        "Live auction engines with real-time bidding & reserve pricing",
+        "Multi-vendor architecture with seller wallets & escrow payouts",
         "Bilingual Arabic/English UX & RTL styling",
-        "NFC digital authenticity verification",
+        "NFC digital watch tap-to-verify authenticity cards",
+      ],
+    },
+    {
+      icon: <FiSmartphone className="w-6 h-6 text-uaeGold" />,
+      title: "Mobile App Development (React Native & Expo)",
+      description:
+        "Building production-grade iOS and Android mobile apps using React Native, Expo Router, and TypeScript with fluid animations, device sensors, and native camera lifecycle handling.",
+      features: [
+        "Cross-platform iOS and Android apps with Expo Router",
+        "Virtual Watch Try-On studio with ISO ID-1 card mm-calibration",
+        "Multi-touch gestures (PanResponder, Animated API)",
+        "Lifecycle recovery handling (Expo getPendingResultAsync)",
       ],
     },
     {
       icon: <FiServer className="w-6 h-6 text-uaeGold" />,
       title: "Full-Stack Web & SaaS Engineering",
       description:
-        "Building scalable web applications using React.js, Next.js, Node.js, Express, and PostgreSQL/MongoDB with clean architecture and robust TypeScript typing.",
+        "Building scalable enterprise web applications using React.js, Next.js (SSR/SSG), Node.js, Express, PostgreSQL, and MongoDB with clean architecture and strict TypeScript typing.",
       features: [
-        "Server-Side Rendering (SSR) & Static Generation",
-        "REST API design with Swagger documentation",
-        "Role-based Access Control (RBAC) & OAuth 2.0",
-        "State management with Redux Toolkit",
-      ],
-    },
-    {
-      icon: <FiCreditCard className="w-6 h-6 text-uaeGold" />,
-      title: "Payments & Regional API Integrations",
-      description:
-        "Integrating mission-critical financial gateways, buy-now-pay-later (BNPL) providers, national digital identities, and regional logistics networks.",
-      features: [
-        "Stripe payments, escrow holding & seller payouts",
-        "Tamara & Tabby BNPL integrations",
-        "UAE PASS National Authentication & KYC",
-        "DHL, Mawgood, and Trend courier delivery APIs",
-      ],
-    },
-    {
-      icon: <FiCloud className="w-6 h-6 text-uaeGold" />,
-      title: "Cloud Infrastructure & AWS Deployment",
-      description:
-        "Configuring secure, highly available cloud environments on AWS, setting up reverse proxies, database clustering, and background job processors.",
-      features: [
-        "AWS EC2, S3 bucket storage & RDS PostgreSQL",
-        "Nginx reverse proxy & SSL certificate setup",
-        "Redis & BullMQ background task processing",
-        "Production monitoring, telemetry & Sentry logging",
+        "Server-Side Rendering (SSR) & Static Site Generation (SSG)",
+        "REST API design with Swagger / Postman documentation",
+        "Prisma ORM schema modeling & database migrations",
+        "Role-based Access Control (RBAC), JWT & OAuth 2.0",
       ],
     },
     {
       icon: <FiCpu className="w-6 h-6 text-uaeGold" />,
       title: "Practical AI & Intelligent Vision",
       description:
-        "Developing conversational shopping assistants using the Google Gemini API, AI-assisted watch scanning, OCR data extraction, and computer vision algorithms.",
+        "Integrating Google Gemini API (Gemini 2.5 Flash with fallback) for photo-based attribute scanning, image-based data extraction, and conversational shopping assistants.",
       features: [
-        "Google Gemini API shopping assistant & catalog grounding",
-        "AI-assisted product scanning & watch identification",
-        "Automated image data extraction & parsing",
-        "Virtual watch try-on & wrist fit estimation",
+        "Google Gemini 2.5 Flash watch photo scanning & extraction",
+        "Conversational AI shopping assistant with catalog grounding",
+        "Automated image parsing: brand, model, reference, dial, condition",
+        "'Find My Watch' wrist-width coverage sizing recommendation engine",
       ],
     },
     {
-      icon: <FiShield className="w-6 h-6 text-uaeGold" />,
-      title: "Desktop ERP & Hardware POS Solutions",
+      icon: <FiCreditCard className="w-6 h-6 text-uaeGold" />,
+      title: "Payments & Regional API Integrations",
       description:
-        "Developing cross-platform desktop applications using Electron.js that interface directly with thermal POS printers, barcode scanners, and WhatsApp ordering.",
+        "Integrating mission-critical financial gateways, buy-now-pay-later (BNPL) providers, national digital identities, and regional logistics networks across the UAE and GCC.",
       features: [
-        "Online and offline billing data synchronization",
-        "Direct thermal POS receipt printer integration",
-        "WhatsApp Catalog & webhook order bots",
-        "Table management & kitchen order tickets (KOT)",
+        "Stripe payments, escrow holding & seller payouts",
+        "Tamara & Tabby BNPL checkout integrations",
+        "UAE PASS National Authentication & eBay API sync",
+        "DHL, Mawgood, and Trend courier delivery APIs & MaxMind GeoIP",
+      ],
+    },
+    {
+      icon: <FiCloud className="w-6 h-6 text-uaeGold" />,
+      title: "Cloud Infrastructure & AWS Deployment",
+      description:
+        "Configuring secure, highly available cloud environments on AWS, setting up reverse proxies, database clustering, and asynchronous background job queues.",
+      features: [
+        "AWS EC2, S3 bucket storage & RDS PostgreSQL",
+        "Nginx reverse proxy, SSL certificates & domain routing",
+        "Redis & BullMQ background queue processing",
+        "Production monitoring, telemetry & Sentry error tracking",
       ],
     },
   ];

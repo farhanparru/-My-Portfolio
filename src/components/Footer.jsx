@@ -8,6 +8,7 @@ import {
   FaCode,
   FaArrowUp,
   FaDownload,
+  FaInstagram,
 } from "react-icons/fa";
 import cvPDF from "../assets/Muhammad-Shamin-Farhan-Full Stack Developer.pdf";
 
@@ -30,11 +31,12 @@ const Footer = () => {
 
   const featuredPlatforms = [
     { name: "TradeAuct Luxury Marketplace", href: "https://tradeauct.com/" },
+    { name: "Montres Mobile App (iOS & Android)", href: "https://www.montres.ae/" },
+    { name: "Emirnex Tech Startup", href: "https://www.instagram.com/emirnex.tech/" },
     { name: "Montero Watch UAE", href: "https://www.monterowatch.com/en" },
     { name: "Demarquee Watch UAE", href: "https://www.demarqueewatch.com/en" },
-    { name: "Montres.ae Luxury Watches", href: "https://www.montres.ae/" },
+    { name: "Montres.ae Luxury Store", href: "https://www.montres.ae/" },
     { name: "Cloud Qlobe Telecom", href: "https://www.cloudqlobe.com/" },
-    { name: "Sevenscape Facility Management", href: "https://www.sevenscape.ae/" },
   ];
 
   return (
@@ -61,13 +63,15 @@ const Footer = () => {
             </div>
 
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md">
-              Full-Stack JavaScript Developer specializing in React.js, Next.js & AI Integration with ~3 years hands-on experience building production marketplace, e-commerce, ERP/POS, and business communication platforms for UAE and GCC markets.
+              Full-Stack JavaScript Developer specializing in React.js and Next.js, with ~3 years combined hands-on experience building production marketplace, e-commerce, ERP/POS platforms, and a React Native mobile app for iOS & Android for UAE and GCC markets.
             </p>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-2.5 pt-2 flex-wrap">
               {[
                 { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/shaminfarhan", label: "LinkedIn" },
                 { icon: <FaGithub />, href: "https://github.com/farhanparru", label: "GitHub" },
+                { icon: <FaInstagram />, href: "https://www.instagram.com/shaminfarhan.dev/", label: "Instagram (@shaminfarhan.dev)" },
+                { icon: <FaInstagram className="text-uaeGold" />, href: "https://www.instagram.com/emirnex.tech/", label: "Emirnex Tech Startup (@emirnex.tech)" },
                 { icon: <FaCode />, href: "https://leetcode.com/u/shaminmuhammad116", label: "LeetCode" },
                 { icon: <FaEnvelope />, href: "mailto:farhan.dev24@gmail.com", label: "Email" },
               ].map((item, idx) => (
